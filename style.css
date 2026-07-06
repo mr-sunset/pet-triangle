@@ -26,12 +26,54 @@ body {
 #top-nav h1 {
     margin: 0 5px;
     cursor: default;
-    color: rgb(255, 255, 148);
+    color: rgb(255, 255, 255);
     transition: all 0.15s ease;
 }
 
-#top-nav input[type="text"] {
+#top-nav p {
     margin: 0 5px;
+    cursor: default;
+    color: rgb(255, 255, 255);
+    transition: all 0.15s ease;
+}
+
+input[type="text"] {
+    background: transparent;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: xx-large;
+}
+
+input[type="color"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: 3px solid #333;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+input[type="color"]::-moz-color-swatch {
+    border: 3px solid #333;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 main {
@@ -47,7 +89,7 @@ main {
     height: 150px;
 }
 
-#actions-container { margin-top: 20px; }
+#actions-container { position: absolute; bottom: 20px; }
 
 .action {
     border-radius: 8px;
@@ -75,7 +117,7 @@ main {
     }
 
     #pet {
-        fill: white;
+        fill: rgb(100, 100, 100);
     }
 
     .action {
