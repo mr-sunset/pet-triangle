@@ -20,64 +20,77 @@ body {
     padding: 12px 16px;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
 }
 
-#top-nav h1 {
+#top-nav h1, #top-nav p {
     margin: 0 5px;
     cursor: default;
     color: rgb(255, 255, 255);
     transition: all 0.15s ease;
 }
 
-#top-nav p {
-    margin: 0 5px;
-    cursor: default;
-    color: rgb(255, 255, 255);
-    transition: all 0.15s ease;
-}
-
-input[type="text"] {
+#pet-name {
     background: transparent;
-    color: black;
+    color: inherit;
     border: none;
     border-radius: 8px;
     padding: 8px;
+    margin-bottom: 3rem;
     text-align: center;
-    margin-bottom: 5rem;
+    width: fit-content;
+    min-width: 30px;
     font-size: xx-large;
 }
 
-input[type="color"] {
+#pet-name:focus {
+    outline: 2px solid black;
+}
+
+#pet-color {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    width: 40px;
-    height: 40px;
+    width: 200px;
+    height: 30px;
+    padding: 0;
+    border: 2px solid black;
     margin: 0;
+    margin-bottom: 12px;
+    border-radius: 20px;
     cursor: pointer;
+    overflow: hidden;
+    background: transparent;
+    transition: all 0.12s ease;
+}
+
+#pet-color:active {
+    transform: scale(0.95);
+}
+
+#pet-color::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border: none;
     background: transparent;
 }
 
-input[type="color"]::-webkit-color-swatch-wrapper {
-    padding: 0;
+#pet-color::-webkit-color-swatch {
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
 }
 
-input[type="color"]::-webkit-color-swatch {
-    border: 3px solid #333;
-    border-radius: 50%;
+#pet-color::-moz-color-swatch {
+    border: 2px solid black;
+    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-input[type="color"]::-moz-color-swatch {
-    border: 3px solid #333;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
 }
 
 main {
-    flex: 1;
+    flex: 0.9;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,10 +115,6 @@ main {
     transition: all 0.12s ease;
 }
 
-.action:hover {
-    transform: translateY(-2px);
-}
-
 .action:active {
     transform: scale(0.95);
 }
@@ -116,6 +125,15 @@ main {
         color: white;
     }
 
+    #pet-name:focus {
+        outline: 2px solid white;
+    }
+
+    #pet-color {
+        border: 2px solid white;
+        color-scheme: dark;
+    }
+
     #pet {
         fill: rgb(100, 100, 100);
     }
@@ -123,5 +141,6 @@ main {
     .action {
         background-color: black;
         border: 2px solid white;
+        color: white;
     }
 }

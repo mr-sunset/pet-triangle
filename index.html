@@ -16,7 +16,6 @@
 
         <main>
             <input type="text" id="pet-name" max="30" placeholder="Pet name">
-            <input type="color" id="pet-color">
 
             <svg viewBox="0 0 2048 2048" id="pet">
                 <g transform="matrix(2.443914,0,0,2.443914,-1478.568019,-1478.568019)">
@@ -25,9 +24,21 @@
             </svg>
 
             <div id="actions-container">
-                <button id="feed" class="action">🍎</button>
-                <button id="drink" class="action">🥤</button>
-                <button id="play" class="action">🛝</button>
+                <input type="color" id="pet-color">
+                <div id="button-row">
+                    <button id="feed" class="action">
+                        🍎
+                        <span id="food-count">0</span>
+                    </button>
+                    <button id="drink" class="action">
+                        🥤
+                        <span id="drink-count">0</span>
+                    </button>
+                    <button id="play" class="action">
+                        🛝
+                        <span id="play-count">0</span>
+                    </button>
+                </div>
             </div>
         </main>
     </body>
